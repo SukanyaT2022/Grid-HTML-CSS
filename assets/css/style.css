@@ -1,0 +1,354 @@
+/* It is important to know how to use CSS grid. While you are learning there are great tools that you can use to help you build grid-template-areas.
+https://grid.layoutit.com/
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+
+For this assignment you will need flex and grid. 
+
+You will also need to use position sticky.
+https://www.youtube.com/watch?v=8TyoihVGErI&ab_channel=KevinPowell
+
+Facebook blue: #3b5998
+Twitter blue: #1da1f2
+Instagram blue: #3f729b
+
+Don't forget to use CSS resets.
+*/
+/* 
+desktop screen */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+}
+
+.menu {
+  background-color: #2b2b2a;
+  height: 50px;
+  width: 100%;
+  color: white;
+  padding-top: 11px;
+}
+
+a:hover {
+  color: black;
+  background-color: white;
+}
+
+.social-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.facebook {
+  color: #3b5998;
+  margin-right: 15px;
+  margin-top: -11px;
+}
+
+.twitter {
+  color: #1da1f2;
+  margin-right: 15px;
+  margin-top: -11px;
+}
+
+.instagram {
+  color: #3f729b;
+  margin-right: 15px;
+  margin-top: -11px;
+}
+
+.item {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.item a:hover {
+  background-color: white;
+  color: black;
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: #eeeee4;
+  height: 2200px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+h5 :link {
+  color: red;
+}
+
+.grid-items {
+  padding: 10px;
+}
+
+.grid-items img {
+  width: 100%;
+}
+
+.grid-items2 {
+  grid-row: 1 / 4;
+  grid-column: 4/5;
+  background-color: white;
+  width: 100%;
+}
+
+.grid-items2 nav {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  margin-top: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 80%;
+  height: 200px;
+  text-align: center;
+  background-color: #eeeee4;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 2px #bdbdb7;
+  position: sticky;
+}
+
+.grid-items2 nav :link {
+  color: #7c7979;
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  margin: 5px 5px;
+  color: #7c7979;
+}
+
+footer {
+  background-color: #2b2b2a;
+  height: 120px;
+  width: 100%;
+  color: white;
+}
+
+footer nav {
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+footer nav :link {
+  margin-left: 20px;
+}
+
+.social2 {
+  display: block;
+}
+
+/* mobile screen */
+
+@media screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+  }
+
+  .menu {
+    background-color: #2b2b2a;
+    height: 150px;
+    width: 100%;
+    color: white;
+    z-index: 1000;
+  }
+
+  .item {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .social-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px;
+    z-index: 1;
+  }
+
+  a:hover {
+    color: black;
+    background-color: white;
+  }
+
+  .grid-items2 nav {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin-top: 180px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    width: 93%;
+    height: 200px;
+    text-align: center;
+    background-color: #eeeee4;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 2px #bdbdb7;
+    position: sticky;
+  }
+
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: #eeeee4;
+    height: 2200px;
+  }
+
+  .grid-items {
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+
+  p {
+    margin-top: auto;
+  }
+
+  .grid-items2 {
+    grid-row: 1;
+    grid-column: 1/6;
+    background-color: white;
+    width: 100%;
+    margin-top: 150px;
+  }
+
+  footer {
+    background-color: #2b2b2a;
+    height: 280px;
+    width: 100%;
+    color: white;
+    margin-top: 4500px;
+  }
+
+  footer nav {
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* for tablet screen */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: #eeeee4;
+    height: 2200px;
+  }
+
+  .grid-items2 {
+    grid-row: 1;
+    grid-column: 1/-1;
+    background-color: white;
+    width: 100%;
+    margin-top: -100px;
+  }
+
+  .grid-items2 nav {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin-top: 180px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    width: 95%;
+    height: 200px;
+    text-align: center;
+    background-color: #eeeee4;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 2px #bdbdb7;
+    position: sticky;
+  }
+
+  a:hover {
+    color: black;
+    background-color: white;
+  }
+
+  footer {
+    background-color: #2b2b2a;
+    height: 180px;
+    width: 100%;
+    color: white;
+    margin-top: 950px;
+  }
+}
+
+/* large screen */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: #eeeee4;
+    height: 2200px;
+  }
+
+  .grid-items2 nav {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin-top: 180px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    width: 93%;
+    height: 200px;
+    text-align: center;
+    background-color: #eeeee4;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 2px #bdbdb7;
+    position: sticky;
+  }
+}
